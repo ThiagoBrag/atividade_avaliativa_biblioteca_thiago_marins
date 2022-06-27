@@ -13,14 +13,14 @@ const {
 } = require('firebase/firestore/lite');
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBILah3w-hYdwoXKxQur2tZvc-t51VvPoo",
-    authDomain: "first-firedatebase-access.firebaseapp.com",
-    projectId: "first-firedatebase-access",
-    storageBucket: "first-firedatebase-access.appspot.com",
-    messagingSenderId: "442755527703",
-    appId: "1:442755527703:web:6c817d52b25d201c9ad852",
-    measurementId: "G-NLCK776SCK"
-};
+    apiKey: "AIzaSyCu7Ujkc0OE34037qLxWoy6L3VBwyBpAog",
+    authDomain: "atividade-biblioteca-thiago.firebaseapp.com",
+    projectId: "atividade-biblioteca-thiago",
+    storageBucket: "atividade-biblioteca-thiago.appspot.com",
+    messagingSenderId: "256625048370",
+    appId: "1:256625048370:web:04519dcf96a1636e2ef52b",
+    measurementId: "G-FNM411M2Z8"
+  };
 
 const app = initializeApp(firebaseConfig);
 
