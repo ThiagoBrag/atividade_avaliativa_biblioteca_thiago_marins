@@ -11,5 +11,5 @@ app.get("/", (req, res) => {
 app.use("/api", router);
 
 app.listen(8080, ()=>{
-    console.log('App listen on http://localhost:8080');
+    console.log('App rodando em http://localhost:8080');
 });

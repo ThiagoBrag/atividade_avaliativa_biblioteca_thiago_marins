@@ -20,9 +20,9 @@ const crud = require('./crud');
 // buscarDadosPorId();
 
 async function salvarDado() {
-    const savedData = await crud.save("Pessoas", null , {
-        nome: "Thiago", sobrenome: "Marins", idade: "16"
+    const dadoSalvo = await crud.salvar("autores", null , {
+        nome: "Diego", sobrenome: "Planinscheck", idade: "17"
     });
-    console.log(savedData);
+    console.log(dadoSalvo);
 }
 salvarDado();
