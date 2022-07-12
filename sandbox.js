@@ -1,17 +1,17 @@
 const crud = require('./crud');
 
 // async function buscarDados() {
-//     const dados = await crud.get("pessoas");
+//     const dados = await crud.get("autores");
 //     console.log(dados);
 // }
 
 // async function buscarDadosPorId() {
-//     const dados = await crud.getById("pessoas", "BUcRElevLjkT3fk06gZA");
+//     const dados = await crud.getById("autores", "");
 //     console.log(dados);
 // }
 
 // async function deletar(){
-//     const dados = await crud.remove("pessoas", "BUcRElevLjkT3fk06gZA");
+//     const dados = await crud.remove("autores", "");
 //     console.log(dados);
 // }
 
