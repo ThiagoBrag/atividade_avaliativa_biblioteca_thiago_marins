@@ -9,11 +9,19 @@ async function procurarLivro(id) {
 }
 
 async function criarLivro(dados) {
-   return await crud.salvar("livros", false, dados);
+    if (dados.nome && dados.genero && dados.idEditora && dados.idAutor) {
+        return await crud.salvar("livros", false, dados);
+    } else {
+        return await "Erro! Falta algum dado!"
+    }
 }
 
 async function editarLivro(dados, id){
-    return await crud.salvar("livros", id, dados);
+    if (dados.nome && dados.genero && dados.idEditora && dados.idAutor) {
+        return await crud.salvar("livros", id, dados);
+    } else {
+        return await "Erro! Falta algum dado!"
+    }
 }
 
 async function deletarLivro(id){

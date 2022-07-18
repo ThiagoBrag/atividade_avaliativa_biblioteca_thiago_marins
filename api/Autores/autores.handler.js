@@ -9,11 +9,19 @@ async function procurarAutor(id) {
 }
 
 async function criarAutor(dados) {
-   return await crud.salvar("autores", false, dados);
+    if (dados.cpf && dados.nome && dados.sobrenome && dados.email) {
+        return await crud.salvar("autores", false, dados);
+    } else {
+        return await "Erro! Falta algum dado!"
+    }
 }
 
 async function editarAutor(dados, id){
-    return await crud.salvar("autores", id, dados);
+    if (dados.cpf && dados.nome && dados.sobrenome && dados.email) {
+        return await crud.salvar("autores", id, dados);
+    } else {
+        return await "Erro! Falta algum dado!"
+    }
 }
 
 async function deletarAutor(id){

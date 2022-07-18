@@ -9,11 +9,29 @@ async function procurarLocacao(id) {
 }
 
 async function criarLocacao(dados) {
-   return await crud.salvar("locacoes", false, dados);
+    const listaLocacoes = await crud.buscar("locacoes");
+    if (listaLocacoes.filter((locacoes) => locacoes.idCliente == dados.idCliente) == "") {
+        if (listaLocacoes.filter((locacoes) => locacoes.idLivro == dados.idLivro) == "") {
+            return await crud.salvar("locacoes", false, dados);
+        } else {
+            return await "Livro inserido já está locado!";
+        }
+    } else {
+        return await "Esse cliente já tem algum livro alugado!";
+    }   
 }
 
 async function editarLocacao(dados, id){
-    return await crud.salvar("locacoes", id, dados);
+    const listaLocacoes = await crud.buscar("locacoes");
+    if (listaLocacoes.filter((locacoes) => locacoes.idCliente == dados.idCliente) == "") {
+        if (listaLocacoes.filter((locacoes) => locacoes.idLivro == dados.idLivro) == "") {
+            return await crud.salvar("locacoes", id, dados);
+        } else {
+            return await "Livro inserido já está locado!";
+        }
+    } else {
+        return await "Esse cliente já tem algum livro alugado!";
+    }
 }
 
 async function deletarLocacao(id){

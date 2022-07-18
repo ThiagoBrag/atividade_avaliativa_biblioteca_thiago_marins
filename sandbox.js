@@ -21,8 +21,8 @@ const crud = require('./crud');
 
 async function salvarDado() {
     const dadoSalvo = await crud.salvar("autores", null , {
-        nome: "Diego", sobrenome: "Planinscheck", idade: "17"
+        nome: "Joao", sobrenome: "Henrique", idade: "17"
     });
-    console.log(dadoSalvo);
+    console.log(dadoSalvo.nome);
 }
 salvarDado();

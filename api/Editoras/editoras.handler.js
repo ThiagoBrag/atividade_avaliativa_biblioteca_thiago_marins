@@ -9,11 +9,20 @@ async function procurarEditora(id) {
 }
 
 async function criarEditora(dados) {
-   return await crud.salvar("editoras", false, dados);
+    if (dados.nome) {
+        return await crud.salvar("editoras", false, dados);
+    } else {
+        return await "Erro! Falta o nome!"
+    }
 }
 
 async function editarEditora(dados, id){
-    return await crud.salvar("editoras", id, dados);
+    if (dados.nome) {
+        return await crud.salvar("editoras", id, dados);
+    } else {
+        return await "Erro! Falta o nome!"
+    }
+    
 }
 
 async function deletarEditora(id){
